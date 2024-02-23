@@ -49,7 +49,7 @@ const iniciarUserGoogle = async (req, res, next) => {
 
         //Guardar el id del usuario en el json
         //Ver si el usuario es admin general y guardar en json para que se guarde como cookie
-        const data_auth = await pool.query('select  * from auth_data($1)', [p_email]);
+        const data_auth = await pool.query('select  * from fu_auth_data($1)', [p_email]);
         console.log(data_auth.rows[0]);
         //parsear los data_auth para enviar en un solo json
         let data = data_auth.rows[0];
