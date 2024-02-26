@@ -27,6 +27,8 @@ app.use(cookie_parser());
 
 //Rutas publicas
 app.use("/authgoogle", authRoutes);
+app.use("/auth", authRoutes);
+app.use("/register", authRoutes);
 
 
 //Rutas protegidas por el token
