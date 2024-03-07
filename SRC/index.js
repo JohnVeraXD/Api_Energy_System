@@ -9,6 +9,7 @@ const { authenticateToken } = require("./middleware/authorization.js");
 
 //Importacion de las rutas principales en variables
 const authRoutes = require("./routes/auth-routes.js");
+const userRoutes = require("./routes/user-routes.js");
 
 //config entorno
 dotenv.config();
@@ -26,13 +27,13 @@ app.use(express.json());
 app.use(cookie_parser());
 
 //Rutas publicas
-app.use("/authgoogle", authRoutes);
 app.use("/auth", authRoutes);
-app.use("/register", authRoutes);
+
 
 
 //Rutas protegidas por el token
 //app.use("/users", authenticateToken, userRoutes);
+app.use("/users", authenticateToken, userRoutes);
 
 
 //Iniciar la API
