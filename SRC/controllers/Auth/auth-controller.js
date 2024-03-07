@@ -133,12 +133,13 @@ const registrarUser = async (req, res, next) => {
         console.log(req.body);
 
         const users = await pool.query('call sp_crear_usuario($1,$2,$3)', [p_nombres_apellidos,p_email,p_contra]);
+        console.log(users);
 
         return res.status(200).json({ message: "Se registro el usuario correctamente" });
 
     } catch (error) {
         next(error);
-        return res.status(404).json({ error: error.message });
+        //return res.status(404).json({ error: error.message });
     }
 }
 
