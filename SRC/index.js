@@ -33,7 +33,7 @@ app.use("/auth", authRoutes);
 
 //Rutas protegidas por el token
 //app.use("/users", authenticateToken, userRoutes);
-app.use("/users", authenticateToken, userRoutes);
+app.use("/usuario", authenticateToken, userRoutes);
 
 
 //Iniciar la API

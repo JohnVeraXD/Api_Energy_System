@@ -4,9 +4,9 @@ const router = Router();
 const {listar_usuario,modificar_usuario} = require('../controllers/Usuarios/usuarios_controller');
 
 //Obtener recursos
-router.get('/ListaTareas/:id', listar_usuario);
+router.get('/Datos/:id_user', listar_usuario);
 //Editar recursos
-router.put('/ModificarTarea',modificar_usuario);
+router.put('/Modificar',modificar_usuario);
 
 
 module.exports = router;
