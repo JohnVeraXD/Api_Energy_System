@@ -62,7 +62,7 @@ const crear_token = async (req, res, next) => {
   try {
     const { p_uuid } = req.body;
 
-    //console.log(req.body);
+    //console.log(p_uuid);
 
     const result = await pool.query("call sp_crear_token($1)", [p_uuid]);
 
